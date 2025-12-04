@@ -1,23 +1,36 @@
-# -securityportfolio.io
-Status,Cloud Platform,Primary Tools,Skills Demonstrated
+Azure Honey Pot
+Status, Cloud Platform,Primary Tools,Skills Demonstrated
 Complete,Azure,"Azure Monitor, Log Analytics, KQL","Threat Detection, Automation"
+
 📌 Project Objective: Addressing Silent Data Exfiltration
+
 Traditional perimeter security (firewalls) cannot stop an attacker who gains internal access or an authorized user who turns malicious (the Insider Threat). These threats often go undetected for months while sensitive data is slowly copied.
 
 The objective of this project was to implement a high-fidelity tripwire—a Honey Pot—that guarantees detection within minutes, drastically reducing the Mean Time to Detect (MTTD) a breach in our cloud storage environment.
 
 🛠️ Architecture & Components
-This solution was built entirely using Azure cloud-native services, leveraging logging and automation to minimize deployment cost and complexity.
+This solution was built entirely using Azure cloud native services, leveraging logging and automation to minimize deployment cost and complexity.
 
 Component	Function in Project	Azure Service
-The Decoy (The Honey)	Hosts the fake sensitive file (passwords.txt) that attracts unauthorized access.	Azure Storage Account (Blob)
-The Log Collector	Configured to stream data access events (reads/downloads).	Diagnostic Settings (Blob Service)
-The Database	Stores and indexes logs, enabling lightning-fast query capabilities.	Log Analytics Workspace
-The Alarm (The Logic)	Runs the search query continuously, looking for a match.	Azure Monitor Alert Rule
-The Pager (The Response)	Sends an instant, critical notification to the security team.	Action Group (Email)
+The Decoy (The Honey)	
+Hosts the fake sensitive file (passwords.txt) that attracts unauthorized access.
+
+Azure Storage Account (Blob)
+The Log Collector	Configured to stream data access events (reads/downloads).	
+
+Diagnostic Settings (Blob Service)
+The Database	Stores and indexes logs, enabling lightning-fast query capabilities.	
+
+Log Analytics Workspace
+The Alarm (The Logic)
+Runs the search query continuously, looking for a match.
+
+Azure Monitor Alert Rule
+The Pager (The Response)	
+Sends an instant, critical notification to the security team via email.
 
 💻 Implementation Summary: Building the Tripwire
-Storage Setup: A storage account (payrolldatabackup2025) was deployed with a deceptive file to serve as the decoy.
+Storage Setup: A storage account (adminpayrolldatabackup2025) was deployed with a deceptive file to serve as the decoy.
 
 Data Pipeline: The Diagnostic Settings feature on the Blob Service was configured to ensure only low-level StorageRead events were streamed to the Log Analytics Workspace.
 
@@ -29,6 +42,7 @@ Code snippet
 StorageBlobLogs
 | where OperationName == "GetBlob"
 | summarize count()
+
 Automation & Response: The Azure Monitor Alert Rule was configured to run the query above. The logic was set to trigger a Severity 0 (Critical) alert if the result count was Greater than 0. This alert was linked to a pre-defined Action Group that sends an email to the security team.
 
 📈 Verification and Results
