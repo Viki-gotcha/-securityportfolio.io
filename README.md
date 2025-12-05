@@ -1,6 +1,12 @@
-Azure Honey Pot
-Status, Cloud Platform,Primary Tools,Skills Demonstrated
-Complete,Azure,"Azure Monitor, Log Analytics, KQL","Threat Detection, Automation"
+Azure Honey Pot🍯🍯
+
+Status - Complete
+
+Cloud Platform - Azure
+
+Primary Tools - Azure Monitor, Log Analytics, KQL
+
+Skills Demonstrated - Threat detection, Automation
 
 📌 Project Objective: Addressing Silent Data Exfiltration
 
