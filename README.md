@@ -1,12 +1,12 @@
 Azure Honey Pot🍯🍯
 
-Status - Complete
+Status - Complete✅
 
-Cloud Platform - Azure
+Cloud Platform - Azure💻
 
-Primary Tools - Azure Monitor, Log Analytics, KQL
+Primary Tools - Azure Monitor, Log Analytics,KQL🔨
 
-Skills Demonstrated - Threat detection, Automation
+Skills Demonstrated - Threat detection, Automation💥
 
 📌 Project Objective: Addressing Silent Data Exfiltration
 
@@ -60,7 +60,7 @@ Result 1: Dashboard Proof The Azure Monitor dashboard immediately reflected the 
 
 Result 2: Real-Time Notification The Action Group instantly delivered a critical email notification, demonstrating the system successfully met the goal of achieving real-time threat detection.
 
-⭐ Key Skills Demonstrated
+⭐ Key Skills Demonstrated 🌟
 Cloud Infrastructure as a Service (IaaS): Resource provisioning and management in Azure.
 
 Threat Detection & Monitoring: Designing logic (KQL) to identify specific malicious actions in cloud logs.
