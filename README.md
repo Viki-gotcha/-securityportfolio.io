@@ -10,7 +10,7 @@ Skills Demonstrated - Threat detection, Automation💥
 
 📌 Project Objective: Addressing Silent Data Exfiltration
 
-Traditional perimeter security (firewalls) cannot stop an attacker who gains internal access or an authorized user who turns malicious (the Insider Threat). These threats often go undetected for months while sensitive data is slowly copied.
+Traditional perimeter security:firewalls, cannot stop an attacker who gains internal access or an authorized user who turns malicious ;the Insider Threat. These threats often go undetected for months while sensitive data is slowly copied.
 
 The objective of this project was to implement a high-fidelity tripwire—a Honey Pot—that guarantees detection within minutes, drastically reducing the Mean Time to Detect (MTTD) a breach in our cloud storage environment.
 
@@ -22,7 +22,7 @@ The Decoy (The Honey)
 Hosts the fake sensitive file (passwords.txt) that attracts unauthorized access.
 
 Azure Storage Account (Blob)
-The Log Collector	Configured to stream data access events (reads/downloads).	
+The Log Collector	Configured to stream data access events (reads and downloads).	
 
 Diagnostic Settings (Blob Service)
 The Database	Stores and indexes logs, enabling lightning-fast query capabilities.	
